@@ -23,13 +23,30 @@
 	/*Color de menu horizontal, texto centrado, tipo de letra, ancho de la bara*/
 	nav{
 		font-family: Roboto,"Helvetica Neue",Helvetica,Arial,"Sans Serif";
-		background-color: #9b2226;
+		background-color: #005F73;
 		color: white;
 		text-align: center;
+		text-decoration: none;
 	}
 
 	nav li{
 		display: inline-block;
 		width: 20%;
 		padding: 10px;
+	}
+
+	/*Color del boton*/
+	a:link{
+		color: white;
+		text-decoration: none;
+	}
+	/*Color del boton ya visitado*/
+	a:visited{
+		color: white;
+		text-decoration: none;
+	}
+	/*Color del boton cuando pasas por encima*/
+	a:hover{
+		color: #E9D8A6;
+		text-decoration: none;
 	}
