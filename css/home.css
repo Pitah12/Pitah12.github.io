@@ -1,0 +1,35 @@
+/*Archivo css de home.html*/
+	/*Tamaño de logo.png*/
+	#logo{
+		width: 100%;
+		height: 25%;
+	}
+	/*Fondo la páigina negro*/
+	body{
+		background-color: 001219;
+	}
+	/*H1 de color blanco, centrado*/
+	h1{
+		text-align: center;
+		color: white;
+		font-family: Roboto,"Helvetica Neue",Helvetica,Arial,"Sans Serif";
+	}
+	/*P de color blanco*/
+	p{
+		color: white;
+		font-family: Roboto,"Helvetica Neue",Helvetica,Arial,"Sans Serif";
+	}
+
+	/*Color de menu horizontal, texto centrado, tipo de letra, ancho de la bara*/
+	nav{
+		font-family: Roboto,"Helvetica Neue",Helvetica,Arial,"Sans Serif";
+		background-color: #9b2226;
+		color: white;
+		text-align: center;
+	}
+
+	nav li{
+		display: inline-block;
+		width: 20%;
+		padding: 10px;
+	}
