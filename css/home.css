@@ -1,8 +1,8 @@
 /*Archivo css de home.html*/
-	/*Tamaño de logo.png*/
+	/*Tamaño de logo.png, con diseño responsive*/
 	#logo{
 		width: 100%;
-		height: 25%;
+		height: auto;
 	}
 	/*Fondo la páigina negro*/
 	body{
@@ -22,6 +22,7 @@
 
 	/*Color de menu horizontal, texto centrado, tipo de letra, ancho de la bara*/
 	nav{
+		width: auto;
 		font-family: Roboto,"Helvetica Neue",Helvetica,Arial,"Sans Serif";
 		background-color: #005F73;
 		color: white;
@@ -31,8 +32,8 @@
 
 	nav li{
 		display: inline-block;
-		width: 20%;
-		padding: 10px;
+		width: auto;
+		padding: 20px;
 	}
 
 	/*Color del boton*/
@@ -49,4 +50,22 @@
 	a:hover{
 		color: #E9D8A6;
 		text-decoration: none;
+	}
+
+	h3{
+		color: white;
+		font-family: Roboto,"Helvetica Neue",Helvetica,Arial,"Sans Serif";
+	}
+	
+	h4{
+		color: white;
+		font-family: Roboto,"Helvetica Neue",Helvetica,Arial,"Sans Serif";
+	}
+
+	#redes{
+		width: auto;
+		font-family: Roboto,"Helvetica Neue",Helvetica,Arial,"Sans Serif";
+		color: white;
+		text-decoration: none;
+		list-style: none;
 	}

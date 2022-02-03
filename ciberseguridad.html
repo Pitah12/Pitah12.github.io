@@ -12,7 +12,7 @@
 	<body>
 		<header>
 			<!--Logo-->
-			<img id="logo" src="/imagenes/logo.png" alt="Logo">
+			<img id="logo" src="/imagenes/logo4.png" alt="Logo">
 			</div>
 			<!--Barra horizontal de menú-->
 			<nav>
@@ -24,9 +24,29 @@
 			</nav>
 		</header>
 		<!--Lista de comandos-->
-		<ul>
+		<ul id="comandos">
 			<p>Comandos</p>
 			<li><p>Linux</p></li>
 			<li><p>Windows</p></li>
 		</ul>
+		<!--Nmap-->
+		<h3>Nmap</h3>
+		<div id="nmap_flags">
+			<p>-sS: </p>
+			<p>-sV: </p>
+			<p>-O: </p>
+			<p>-nO: Para guardar el output en un archivo.</p>
+			<p id="ejemplo">Ejemplo: Nmap -p- 10.10.10.10 <font color="red">-oN</font> <font color="0A9396">puertos</font></p>
+		</div>
+		<!--Programas útiles-->
+		<h3>Programas útiles</h3>
+		<div id="programas">
+			<h4 id="h4_programas">Crackmapexec</h4>
+			<p>Permite obtener información de una red de computadoras.</p>
+			<h4 id="h4_programas">Evil-Winrm</h4>
+			<p>Shell que usa Windows Remote Management (puerto 135)</p>
+			<p id="ejemplo">Ejemplo: evil-winrm -i <font color="0A9396">IP</font> -u <font color="0A9396">usuario</font> -p <font color="0A9396">contraseña</font></p>
+			<h4 id="h4_programas">Lookupsid</h4>
+			<p>Permite enumerar por fuerza bruta si hay más usuarios. Necesitas credenciales</p>
+			<p id="ejemplo">lookupsid.py <font color="0A9396">WORKGROUP/usuario</font>:<font color="EE9B00">"contreaseña"</font>@<font color="0A9396">IP</font>></p>
 	</body>
