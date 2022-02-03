@@ -4,14 +4,15 @@
 	width: auto;
 }
 
-#nmap_flags{
-	width: auto;
-	font-family: Roboto,"Helvetica Neue",Helvetica,Arial,"Sans Serif";
-	color: white;
-	text-decoration: none;
+#h4_programas{
+	color: #E9D8A6;
+	font-weight: bold;
 }
 
-#h4_programas{
-	color: #0A9396;
+#comandos{
 	font-family: Roboto,"Helvetica Neue",Helvetica,Arial,"Sans Serif";
+	color: white;
+	padding: 1%;
+	width: auto;
+	list-style: none;
 }

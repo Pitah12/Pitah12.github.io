@@ -21,19 +21,53 @@
 	}
 
 	/*Color de menu horizontal, texto centrado, tipo de letra, ancho de la bara*/
-	nav{
-		width: auto;
+	.navegacion{
 		font-family: Roboto,"Helvetica Neue",Helvetica,Arial,"Sans Serif";
 		background-color: #005F73;
 		color: white;
-		text-align: center;
 		text-decoration: none;
 	}
 
-	nav li{
+	.navegacion ul{
+		list-style: none;
+	}
+
+	.menu > li{
 		display: inline-block;
+	}
+
+	.menu > li > a{
+		display: block;
+		padding: 15px 20px;
+
+	}
+	
+	.menu li a:hover{
+		color: #CE7D35;
+		transition: all .3s;
+	}
+	
+	/* Submenu*/
+	
+	.submenu{
+		position: absolute;
+		background: #005F73;
 		width: auto;
-		padding: 20px;
+		visibility: hidden;
+		opacity: 0;
+		transition: opacity 1.5s;
+		padding: 1%;
+	}
+	
+	.submenu li a{
+		display: block;
+		padding: 10px;
+		color: #fff;
+	}
+	
+	.menu li:hover .submenu{
+		visibility: visible;
+		opacity: 1;
 	}
 
 	/*Color del boton*/

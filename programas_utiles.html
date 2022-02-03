@@ -1,0 +1,43 @@
+<!--Crea el esqueleto general de HTML-->
+<html lang="es">
+	<!--Idioma en español-->
+	<head>
+		<meta charset="utf-8">
+		<title>Home</title>
+	</head>
+	<!--Link al archivo css llamado home.css-->
+	<link rel="stylesheet" type="text/css" href="/css/home.css">
+	<link rel="stylesheet" type="text/css" href="/css/ciberseguridad.css">
+	
+	<body>
+		<header>
+			<!--Logo-->
+			<img id="logo" src="/imagenes/logo4.png" alt="Logo">
+			</div>
+			<!--Barra horizontal de menú-->
+			<nav class="navegacion">
+				<ul class="menu">
+					<li><a href="/index.html"">Home</a></li>
+					<li><a href="#">Ciberseguridad</a>
+						<ul class="submenu">
+							<li><a href="/comandos.html">Comandos</a></li>
+							<li><a href="/programas_utiles.html">Programas útiles</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Programación</a></li>
+					<li><a href="#">Contacto</a></li>
+				</ul>
+			</nav>
+		</header>	
+		<!--Programas útiles-->
+		<h3>Programas útiles</h3>
+		<div id="programas">
+			<h4 id="h4_programas">Crackmapexec</h4>
+			<p>Permite obtener información de una red de computadoras.</p>
+			<h4 id="h4_programas">Evil-Winrm</h4>
+			<p>Shell que usa Windows Remote Management (puerto 135)</p>
+			<p id="ejemplo">Ejemplo: evil-winrm -i <font color="0A9396">IP</font> -u <font color="0A9396">usuario</font> -p <font color="0A9396">contraseña</font></p>
+			<h4 id="h4_programas">Lookupsid</h4>
+			<p>Permite enumerar por fuerza bruta si hay más usuarios. Necesitas credenciales</p>
+			<p id="ejemplo">lookupsid.py <font color="0A9396">WORKGROUP/usuario</font>:<font color="EE9B00">"contreaseña"</font>@<font color="0A9396">IP</font>></p>
+	</body>

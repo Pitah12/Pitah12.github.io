@@ -1,4 +1,3 @@
-<!--Página principal con cuerpo, cabecera y todo eso-->
 <html lang="es">
 	<!--Idioma en español-->
 	<head>
@@ -7,6 +6,7 @@
 	</head>
 	<!--Link al archivo css llamado home.css-->
 	<link rel="stylesheet" type="text/css" href="/css/home.css">
+	<link rel="stylesheet" type="text/css" href="/css/ciberseguridad.css">
 	<body>
 		<header>
 			<!--Logo-->
@@ -27,13 +27,27 @@
 				</ul>
 			</nav>
 		</header>
-			<!--Links a listas de redes profesionales-->
-			<ul id="redes">
-				<p>Redes y perfiles relacionados con mi profesión</p>
-				<li><a href="https://github.com/pitah12" class="boton">GitHub</a></li>
-				<li><a href="https://www.linkedin.com/in/pedro-mart%C3%ADnez-contreras/" class="boton">LinkedIn</a></li>
-				<li><a href="https://app.hackthebox.com/profile/819742" class="boton">HackTheBox</a></li>
-			</ul>
-			<p>Cosas pendientes: Menú desplegable para ciberseguridad y así dividir los temas.</p>
+		<ul id="comandos">
+			<li id="linux">Linux
+			<lu>
+				<li>Ping:</li>
+				<p id="ejemplo">Ejemplo:</p>
+				<li>Nslookup:</li>
+				<p id="ejemplo">Ejemplo:</p>
+				<dig>Dig:</dig>
+				<p id="ejemplo">Ejemplo:</p>
+			</lu>
+			</li>
+			<li><p>Windows</p></li>
+		</ul>
+		<!--Nmap-->
+		<h3>Nmap</h3>
+		<div id="nmap_flags">
+			<p>-sS: </p>
+			<p>-sV: </p>
+			<p>-O: </p>
+			<p>-nO: Para guardar el output en un archivo.</p>
+			<p id="ejemplo">Ejemplo: Nmap -p- 10.10.10.10 <font color="red">-oN</font> <font color="0A9396">puertos</font></p>
+		</div>
 	</body>
 </html>
