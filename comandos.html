@@ -28,26 +28,36 @@
 			</nav>
 		</header>
 		<ul id="comandos">
-			<li id="linux">Linux
 			<lu>
-				<li>Ping:</li>
+				<h4><li>Nmap</li></h4>
+				<p>Utilidad de diagnóstico de redes.</p>
+				<p><font color="red">-n</font> no realiza resolución DNS inversa. Agiliza el analisis.<br/>
+				<font color="red">-T</font> Velocidad del escanero. Del 0 al 5 siendo 0 lento y 5 rápido pero más ruidoso.</br>
+				<font color="red">-sS</font> Escaner TCP SYN.</br>
+				<font color="red">-sU</font> Escaner UDP.</br>
+				<font color="red">-O</font> Detección del sistema operativo.</br>
+				<font color="red">-sC</font> --script=default.</br>
+				<font color="red">-nO</font> Para guardar el output en un archivo.</br>
+				<font color="red">--script</font> vuln, discovery, auth, etc.</br>
+				<font color="red">-p</font> Puertos. -p22 -p1-65535 -p- (todos los puertos)</br></p>
+				<p id="ejemplo">Ejemplo: nmap -p- -n -T5 -sS 10.10.11.111 -nO puertos</p>
+				<h4><li>Nslookup</li></h4>
 				<p id="ejemplo">Ejemplo:</p>
-				<li>Nslookup:</li>
+				<h4><li>Dig</li></h4>
 				<p id="ejemplo">Ejemplo:</p>
-				<dig>Dig:</dig>
+				<h4><li>NC</li></h4>
 				<p id="ejemplo">Ejemplo:</p>
+				<h4><li>SCP</li></h4>
+				<p>Subir o descargar archivos a través del protocolo SSH.
+					<br/> <font color="red">-r</font> para subir carpetas (recursive).
+					<br/> <font color="red">-i</font> añadir archivo de identificación (id_rsa)</p>
+				<p id="ejemplo">(Subir archivo) scp archivo_local usuario@servidor:/ruta<br/>(Descargar archivo) scp usuario@servidor:/ruta/archivo archivo_local</p>
 			</lu>
-			</li>
-			<li><p>Windows</p></li>
 		</ul>
-		<!--Nmap-->
-		<h3>Nmap</h3>
-		<div id="nmap_flags">
-			<p>-sS: </p>
-			<p>-sV: </p>
-			<p>-O: </p>
-			<p>-nO: Para guardar el output en un archivo.</p>
-			<p id="ejemplo">Ejemplo: Nmap -p- 10.10.10.10 <font color="red">-oN</font> <font color="0A9396">puertos</font></p>
+		<footer>
+			<div class="footer">
+				<p>Copyright © 2022 - Pitah</p>
+			</div>
 		</div>
 	</body>
 </html>
