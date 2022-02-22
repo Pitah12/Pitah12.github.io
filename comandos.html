@@ -29,7 +29,10 @@
 		</header>
 		<ul id="comandos">
 			<lu>
-				<h4>Comandos rápidos</h4>
+				<!--style="display: none; es para que aparezca por defecto oculto-->
+				<button onclick="leerMasComandos()" id="leerMasComandos">Comandos Rápidos</button>
+				<button onclick="leerMasNmap()" id="leerMasNmap">Nmap</button>
+				<div class="linux" id="linux" style="display: none;">
 				<p><font color="red">ls</font> listar los archivos de donde te encuentras.</br>
 				<font color="red">du</font> listar los archivos de donde te encuentras.</br>
 				<font color="red">mkdir</font> crear carpeta.</br>
@@ -39,7 +42,19 @@
 				<font color="red">grep</font> buscar en el output.</br>
 				<font color="red">history</font> lista de los comandos ejecutados.</br>
 				<font color="red">pwd</font> en qué lugar del sistema te encuentras.</br></p>
-				<h4><li>Nmap</li></h4>
+				</div>
+				<script>
+					//Función para mostrar el contenido oculto en el botón leer más.
+					function leerMasComandos(){
+						var x = document.getElementById("linux");
+						if(x.style.display === "none"){
+							x.style.display = "block";
+						}else{
+							x.style.display = "none";
+						}
+					}
+				</script>
+				<div class="linux" id="nmap" style="display: none;">
 				<p>Utilidad de diagnóstico de redes.</p>
 				<p><font color="red">-n</font> no realiza resolución DNS inversa. Agiliza el analisis.<br/>
 				<font color="red">-T</font> Velocidad del escanero. Del 0 al 5 siendo 0 lento y 5 rápido pero más ruidoso.</br>
@@ -51,6 +66,20 @@
 				<font color="red">--script</font> vuln, discovery, auth, etc.</br>
 				<font color="red">-p</font> Puertos. -p22 -p1-65535 -p- (todos los puertos)</br></p>
 				<p id="ejemplo">Ejemplo: nmap -p- -n -T5 -sS 10.10.11.111 -nO puertos</p>
+				</div>
+
+				<script>
+					//Función para mostrar el contenido oculto en el botón leer más.
+					function leerMasNmap(){
+						var x = document.getElementById("nmap");
+						if(x.style.display === "none"){
+							x.style.display = "block";
+						}else{
+							x.style.display = "none";
+						}
+					}
+				</script>
+
 				<h4><li>Nslookup</li></h4>
 				<p id="ejemplo">Ejemplo:</p>
 				<h4><li>Dig</li></h4>

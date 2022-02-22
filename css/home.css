@@ -39,7 +39,6 @@
 	.menu > li > a{
 		display: block;
 		padding: 15px 20px;
-
 	}
 	
 	.menu li a:hover{
@@ -103,3 +102,12 @@
 		text-decoration: none;
 		list-style: none;
 	}
+
+	#leermas{
+		width: auto;
+		font-family: Roboto,"Helvetica Neue",Helvetica,Arial,"Sans Serif";
+		text-decoration: none;
+		list-style: none;
+		color: #005F73;
+	}
+	
