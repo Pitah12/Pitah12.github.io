@@ -16,3 +16,23 @@
 	width: auto;
 	list-style: none;
 }
+
+#leerMasComandos{
+	font-family: Roboto,"Helvetica Neue",Helvetica,Arial,"Sans Serif";
+	transition-duration: 2s;
+}
+
+.block{
+	display: block;
+	background-color: #0A9396;
+	border: none;
+	padding: 1%;
+	width: auto;
+	cursor: pointer;
+	margin-bottom: 2%;
+}
+
+.linux{
+	display: none;
+}
+

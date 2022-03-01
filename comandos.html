@@ -30,9 +30,9 @@
 		<ul id="comandos">
 			<lu>
 				<!--style="display: none; es para que aparezca por defecto oculto-->
-				<button onclick="leerMasComandos()" id="leerMasComandos">Comandos Rápidos</button>
-				<button onclick="leerMasNmap()" id="leerMasNmap">Nmap</button>
-				<div class="linux" id="linux" style="display: none;">
+				<!--Aquí comienza el boton comandos rápidos-->
+				<button onclick="leerMasComandos()" id="leerMasComandos" class="block">Comandos Rápidos</button>
+				<div class="linux" id="linux">
 				<p><font color="red">ls</font> listar los archivos de donde te encuentras.</br>
 				<font color="red">du</font> listar los archivos de donde te encuentras.</br>
 				<font color="red">mkdir</font> crear carpeta.</br>
@@ -43,6 +43,7 @@
 				<font color="red">history</font> lista de los comandos ejecutados.</br>
 				<font color="red">pwd</font> en qué lugar del sistema te encuentras.</br></p>
 				</div>
+				<button onclick="leerMasNmap()" id="leerMasNmap" class="block">Nmap</button>
 				<script>
 					//Función para mostrar el contenido oculto en el botón leer más.
 					function leerMasComandos(){
@@ -54,6 +55,7 @@
 						}
 					}
 				</script>
+				<!--Aquí comienza el boton comandos nmap-->
 				<div class="linux" id="nmap" style="display: none;">
 				<p>Utilidad de diagnóstico de redes.</p>
 				<p><font color="red">-n</font> no realiza resolución DNS inversa. Agiliza el analisis.<br/>
@@ -79,18 +81,34 @@
 						}
 					}
 				</script>
-
-				<h4><li>Nslookup</li></h4>
+				<!--Aquí comienza el boton Nslookup-->
+				<button onclick="leerMasNslookup()" id="leerMasNslookup" class="block">Nslookup</button>
 				<p id="ejemplo">Ejemplo:</p>
-				<h4><li>Dig</li></h4>
+				<!--Aquí comienza el boton Dig-->
+				<button onclick="leerMasDig()" id="leerMasDig" class="block">Dig</button>
 				<p id="ejemplo">Ejemplo:</p>
-				<h4><li>NC</li></h4>
+				<!--Aquí comienza el boton NC-->
+				<button onclick="leerMasNC()" id="leerMasNC" class="block">NC</button>
 				<p id="ejemplo">Ejemplo:</p>
-				<h4><li>SCP</li></h4>
-				<p>Subir o descargar archivos a través del protocolo SSH.
+				<!--Aquí comienza el boton SCP-->
+				<button onclick="leerMasSCP()" id="leerMasSCP" class="block">SCP</button>
+				<div class="scp" id="scp" style="display: none;">
+					<p>Subir o descargar archivos a través del protocolo SSH.
 					<br/> <font color="red">-r</font> para subir carpetas (recursive).
 					<br/> <font color="red">-i</font> añadir archivo de identificación (id_rsa)</p>
-				<p id="ejemplo">(Subir archivo) scp archivo_local usuario@servidor:/ruta<br/>(Descargar archivo) scp usuario@servidor:/ruta/archivo archivo_local</p>
+					<p id="ejemplo">(Subir archivo) scp archivo_local usuario@servidor:/ruta<br/>(Descargar archivo) scp usuario@servidor:/ruta/archivo archivo_local</p>
+				</div>
+				<script>
+					//Función para mostrar el contenido oculto en el botón leer más.
+					function leerMasSCP(){
+						var x = document.getElementById("scp");
+						if(x.style.display === "none"){
+							x.style.display = "block";
+						}else{
+							x.style.display = "none";
+						}
+					}
+				</script>
 			</lu>
 		</ul>
 		<footer>
