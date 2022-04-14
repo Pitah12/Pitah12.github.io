@@ -1,0 +1,84 @@
+<!--Página principal con cuerpo, cabecera y todo eso-->
+<html lang="es">
+	<!--Idioma en español-->
+	<head>
+		<meta charset="utf-8">
+		<title>Pitah</title>
+	</head>
+	<!--Link al archivo css llamado home.css-->
+	<link rel="stylesheet" type="text/css" href="/css/home.css">
+	<link rel="stylesheet" type="text/css" href="/css/ciberseguridad.css">
+	<body>
+		<header>
+			<!--Logo-->
+			<img id="logo" src="/imagenes/logo4.png" alt="Logo">
+			</div>
+			<!--Barra horizontal de menú-->
+			<nav class="navegacion">
+				<ul class="menu">
+					<li><a href="/index.html"">Home</a></li>
+					<li><a href="/linux.html">Linux</a></li>
+					<li><a href="#">Ciberseguridad</a>
+						<ul class="submenu">
+							<li><a href="/comandos.html">Comandos</a></li>
+							<li><a href="/programas_utiles.html">Programas útiles</a></li>
+							<li><a href="/cosas_sueltas.html">Cosas sueltas</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Programación</a></li>
+					<li><a href="#">Contacto</a></li>
+				</ul>
+			</nav>
+		</header>
+		<ul id="comandos">
+			<lu>
+				<!--style="display: none; es para que aparezca por defecto oculto-->
+				<!--Aquí comienza el boton comandos rápidos-->
+				<button onclick="leerMasComandos()" id="leerMasComandos" class="block">Comandos Rápidos</button>
+				<div class="linux" id="linux">
+				<p><font color="red">ls</font> Listar los archivos de donde te encuentras.</br>
+				<font color="red">du</font> Listar los archivos de donde te encuentras.</br>
+				<font color="red">mkdir</font> Crear carpeta.</br>
+				<font color="red">rm</font> Borrar archivo. <font color="red">rmdir</font> Borrar carpeta vacía. <font color="red">-r</font> Borrar carpeta y su interior.</br>
+				<font color="red">cat</font> Leer archivo.</br>
+				<font color="red">touch</font> Crear carpeta. </br>
+				<font color="red">grep</font> Buscar en el output.</br>
+				<font color="red">history</font> Lista de los comandos ejecutados.</br>
+				<font color="red">pwd</font> En qué lugar del sistema te encuentras.</br>
+				<font color="red">systemtcl</font> Arranca servicios</br>
+				<font color="red">service</font> Es una envoltura de /etc/init.d. Para arrancar servicios también.</br></p>
+				</div>
+				<script>
+					//Función para mostrar el contenido oculto en el botón leer más.
+					function leerMasComandos(){
+						var x = document.getElementById("linux");
+						if(x.style.display === "none"){
+							x.style.display = "block";
+						}else{
+							x.style.display = "none";
+						}
+					}
+				</script>
+			<button onclick="leerMasDirectorios()" id="leerMasDirectorios" class="block">Directorios</button>
+			<div class="directorios" id="directorios" style="display: none;">
+				<p>Directorios más importantes a recordar.</p>
+				<p><font color="red">.ssh/id_rsa</font> Key para conectarse por ssh.</br>
+				<p id="ejemplo">
+				<font color="red">></font> chmod 600 .ssh/id_rsa. Para usarlo, por seguridad, no puede tener permisos de escritura.</br>
+				</p>
+			</div>
+			<script>
+				//Función para mostrar el contenido oculto en el botón leer más.
+				function leerMasDirectorios(){
+					var x = document.getElementById("directorios");
+					if(x.style.display === "none"){
+						x.style.display = "block";
+					}else{
+						x.style.display = "none";
+					}
+				}
+			</script>
+			</lu>
+		</ul>
+		</body>
+</html>

@@ -7,6 +7,7 @@
 	</head>
 	<!--Link al archivo css llamado home.css-->
 	<link rel="stylesheet" type="text/css" href="/css/home.css">
+	<link rel="stylesheet" type="text/css" href="/css/ciberseguridad.css">
 	<body>
 		<header>
 			<!--Logo-->
@@ -29,13 +30,26 @@
 				</ul>
 			</nav>
 		</header>
-			<!--Links a listas de redes profesionales-->
-			<ul id="redes">
-				<p>Redes y perfiles relacionados con mi profesión</p>
-				<li><a href="https://github.com/pitah12" class="boton">GitHub</a></li>
-				<li><a href="https://www.linkedin.com/in/pedro-mart%C3%ADnez-contreras/" class="boton">LinkedIn</a></li>
-				<li><a href="https://app.hackthebox.com/profile/819742" class="boton">HackTheBox</a></li>
-			</ul>
-			<p>Cosas pendientes: Menú desplegable para ciberseguridad y así dividir los temas.</p>
-	</body>
-</html>
+			<!--Windows cambiando lupa por cmp-->
+			<ul id="comandos">
+				<button onclick="leerMasWindows()" id="leerMasWindows" class="block">Windows</button>
+				<div class="windows" id="windows" style="display: none;">
+					<p>Cambio de los nombres cmd y magnify en Windows/System32/</p>
+
+					<p id="ejemplo">
+					<font color="red">></font> net user /add Pitah
+					<br/> <font color="red">></font> net localgroup administrators Pitah /add
+					<br/> <font color="red">></font> net user Pitah <font color="yellow">password</font>
+					</p>
+				</div>
+				<script>
+					//Función para mostrar el contenido oculto en el botón leer más.
+					function leerMasWindows(){
+						var x = document.getElementById("windows");
+						if(x.style.display === "none"){
+							x.style.display = "block";
+						}else{
+							x.style.display = "none";
+						}
+					}
+				</script>

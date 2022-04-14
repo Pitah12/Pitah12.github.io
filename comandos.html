@@ -16,10 +16,12 @@
 			<nav class="navegacion">
 				<ul class="menu">
 					<li><a href="/index.html"">Home</a></li>
+					<li><a href="/linux.html">Linux</a></li>
 					<li><a href="#">Ciberseguridad</a>
 						<ul class="submenu">
 							<li><a href="/comandos.html">Comandos</a></li>
 							<li><a href="/programas_utiles.html">Programas útiles</a></li>
+							<li><a href="/cosas_sueltas.html">Cosas sueltas</a></li>
 						</ul>
 					</li>
 					<li><a href="#">Programación</a></li>
@@ -31,31 +33,8 @@
 			<lu>
 				<!--style="display: none; es para que aparezca por defecto oculto-->
 				<!--Aquí comienza el boton comandos rápidos-->
-				<button onclick="leerMasComandos()" id="leerMasComandos" class="block">Comandos Rápidos</button>
-				<div class="linux" id="linux">
-				<p><font color="red">ls</font> listar los archivos de donde te encuentras.</br>
-				<font color="red">du</font> listar los archivos de donde te encuentras.</br>
-				<font color="red">mkdir</font> crear carpeta.</br>
-				<font color="red">rm</font> borrar archivo. <font color="red">rmdir</font> borrar carpeta vacía. <font color="red">-r</font> borrar carpeta y su interior.</br>
-				<font color="red">cat</font> leer archivo.</br>
-				<font color="red">touch</font> crear carpeta. </br>
-				<font color="red">grep</font> buscar en el output.</br>
-				<font color="red">history</font> lista de los comandos ejecutados.</br>
-				<font color="red">pwd</font> en qué lugar del sistema te encuentras.</br></p>
-				</div>
-				<button onclick="leerMasNmap()" id="leerMasNmap" class="block">Nmap</button>
-				<script>
-					//Función para mostrar el contenido oculto en el botón leer más.
-					function leerMasComandos(){
-						var x = document.getElementById("linux");
-						if(x.style.display === "none"){
-							x.style.display = "block";
-						}else{
-							x.style.display = "none";
-						}
-					}
-				</script>
 				<!--Aquí comienza el boton comandos nmap-->
+				<button onclick="leerMasNmap()" id="leerMasNmap" class="block">Nmap</button>
 				<div class="linux" id="nmap" style="display: none;">
 				<p>Utilidad de diagnóstico de redes.</p>
 				<p><font color="red">-n</font> no realiza resolución DNS inversa. Agiliza el analisis.<br/>
