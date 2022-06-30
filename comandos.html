@@ -71,7 +71,7 @@
 				<font color="red">-t</font> Número de conexiones simultaneas.</br>
 				<font color="red">-hc</font> Ocultar resultados con código de respuesta espeficicado (Hide Code).</br>
 				<font color="red">-hw</font> Ocultar resultados con el número de palabras especificado (Hide Words).</br>
-				<font color="red">-hh</font> Ocultar resultados con el número de letras espeficiado.</br>
+				<font color="red">-hh</font> Ocultar resultados con el número de letras espeficiado. —hh=854 oculta los resultados con 854 caracteres.</br>
 				</p>
 				<p id="ejemplo">Ejemplo: wfuzz -c -t 200 --hc=404 -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt 10.10.11.143/FUZZ</p>
 				</div>
@@ -148,6 +148,24 @@
 					//Función para mostrar el contenido oculto en el botón leer más.
 					function leerMasSCP(){
 						var x = document.getElementById("scp");
+						if(x.style.display === "none"){
+							x.style.display = "block";
+						}else{
+							x.style.display = "none";
+						}
+					}
+				</script>
+
+				<!--Aquí comienza el boton Jhon The Ripper-->
+				<button onclick="leerMasJhonTheRipper()" id="leerMasJhonTheRipper" class="block">Jhon The Ripper</button>
+				<div class="jhonTheRipper" id="jhonTheRipper" style="display: none;">
+				<p>Herramienta de recuperación/crackeo de contraseñas.</p>
+				<p id="ejemplo">Ejemplo: john —wordlist=/usr/share/wordlists/rockyou.txt archivo_hash</p>
+				</div>
+				<script>
+					//Función para mostrar el contenido oculto en el botón leer más.
+					function leerMasJhonTheRipper(){
+						var x = document.getElementById("jhonTheRipper");
 						if(x.style.display === "none"){
 							x.style.display = "block";
 						}else{
