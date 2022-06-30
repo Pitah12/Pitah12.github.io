@@ -46,7 +46,10 @@
 				<font color="red">-nO</font> Para guardar el output en un archivo.</br>
 				<font color="red">--script</font> vuln, discovery, auth, etc.</br>
 				<font color="red">-p</font> Puertos. -p22 -p1-65535 -p- (todos los puertos)</br></p>
+				<font color="red">--open</font> Solo enseñar puertos abiertos.</br>
+				<font color="red">--min-rate</font> No mandar paquetes más lentos que el valor especificado (por segundo).</br>
 				<p id="ejemplo">Ejemplo: nmap -p- -n -T5 -sS 10.10.11.111 -nO puertos</p>
+				<p id="ejemplo">Ejemplo: nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn 10.10.11.149 -oN scan</p>
 				</div>
 
 				<script>
@@ -60,15 +63,78 @@
 						}
 					}
 				</script>
+				<!--Aquí comienza el boton comandos WFUZZ-->
+				<button onclick="leerMasWfuzz()" id="leerMasWfuzz" class="block">Wfuzz</button>
+				<div class="wfuzz" id="wfuzz" style="display: none;">
+				<p>Escanear por fuerza bruta las posibles rutas de una URL.</p>
+				<p><font color="red">-c</font> Output con colores.</br>
+				<font color="red">-t</font> Número de conexiones simultaneas.</br>
+				<font color="red">-hc</font> Ocultar resultados con código de respuesta espeficicado (Hide Code).</br>
+				<font color="red">-hw</font> Ocultar resultados con el número de palabras especificado (Hide Words).</br>
+				<font color="red">-hh</font> Ocultar resultados con el número de letras espeficiado.</br>
+				</p>
+				<p id="ejemplo">Ejemplo: wfuzz -c -t 200 --hc=404 -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt 10.10.11.143/FUZZ</p>
+				</div>
+				<script>
+					//Función para mostrar el contenido oculto en el botón leer más.
+					function leerMasWfuzz(){
+						var x = document.getElementById("wfuzz");
+						if(x.style.display === "none"){
+							x.style.display = "block";
+						}else{
+							x.style.display = "none";
+						}
+					}
+				</script>
+
 				<!--Aquí comienza el boton Nslookup-->
 				<button onclick="leerMasNslookup()" id="leerMasNslookup" class="block">Nslookup</button>
 				<p id="ejemplo">Ejemplo:</p>
 				<!--Aquí comienza el boton Dig-->
 				<button onclick="leerMasDig()" id="leerMasDig" class="block">Dig</button>
 				<p id="ejemplo">Ejemplo:</p>
+
+				<!--Aquí comienza el boton Servdor Python-->
+				<button onclick="leerMasServdorPython()" id="leerMasServdorPython" class="block">Servdor Python</button>
+				<div class="servdorPython" id="servdorPython" style="display: none;">
+				<p>Módulo de Python para crear un servidor rápidamente.</p>
+				<p><font color="red">-m</font> Elegir el módulo a utilizar.</br>
+				<p id="ejemplo">Ejemplo: python3 -m http.server 80</p>
+				</div>
+				<script>
+					//Función para mostrar el contenido oculto en el botón leer más.
+					function leerMasServdorPython(){
+						var x = document.getElementById("servdorPython");
+						if(x.style.display === "none"){
+							x.style.display = "block";
+						}else{
+							x.style.display = "none";
+						}
+					}
+				</script>
+				
 				<!--Aquí comienza el boton NC-->
 				<button onclick="leerMasNC()" id="leerMasNC" class="block">NC</button>
-				<p id="ejemplo">Ejemplo:</p>
+				<div class="nc" id="nc" style="display: none;">
+				<p>Herramienta de análisis de red. Navaja suiza para los hackers.</p>
+				<p><font color="red">-n</font> Sólo IPs, sin resolución DNS</br>
+				<font color="red">-l</font> Modo escucha</br>
+				<font color="red">-v</font> Verbose</br>
+				<font color="red">-p</font> Puerto</br>
+				<p id="ejemplo">Ejemplo: nc -nlvp 443</p>
+				</div>
+				<script>
+					//Función para mostrar el contenido oculto en el botón leer más.
+					function leerMasNC(){
+						var x = document.getElementById("nc");
+						if(x.style.display === "none"){
+							x.style.display = "block";
+						}else{
+							x.style.display = "none";
+						}
+					}
+				</script>
+
 				<!--Aquí comienza el boton SCP-->
 				<button onclick="leerMasSCP()" id="leerMasSCP" class="block">SCP</button>
 				<div class="scp" id="scp" style="display: none;">
@@ -76,6 +142,7 @@
 					<br/> <font color="red">-r</font> para subir carpetas (recursive).
 					<br/> <font color="red">-i</font> añadir archivo de identificación (id_rsa)</p>
 					<p id="ejemplo">(Subir archivo) scp archivo_local usuario@servidor:/ruta<br/>(Descargar archivo) scp usuario@servidor:/ruta/archivo archivo_local</p>
+					<p id="ejemplo">Ejemplo: scp -r CVE-2021-4034 www-data@10.10.11.104:/var/www/html/</p>
 				</div>
 				<script>
 					//Función para mostrar el contenido oculto en el botón leer más.
