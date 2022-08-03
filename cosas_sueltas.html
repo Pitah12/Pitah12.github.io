@@ -35,13 +35,13 @@
 			<ul id="comandos">
 				<!--Cheat sheets-->
 				<button onclick="leerMasCheat()" id="leerMasCheat" class="block">Cheat sheets</button>
-				<div class="cheat" id="linux" style="display: none;">
+				<div class="cheat" id="cheat" style="display: none;">
 					<p>Cheat sheet de respuestas HTTP</p>
 					<img id="html_cheat" src="/imagenes/http_cheat.jpg" alt="Cheat sheet de respuestas HTTP" width="50%">
 				</div>
 				<script>
 					function leerMasCheat() {
-						var x = document.getElementById("linux");
+						var x = document.getElementById("cheat");
 						if (x.style.display === "none") {
 							x.style.display = "block";
 						} else {
