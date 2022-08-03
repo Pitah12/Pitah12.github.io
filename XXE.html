@@ -1,0 +1,79 @@
+<!--Idioma en español-->
+<head>
+    <meta charset="utf-8">
+    <title>Pitah</title>
+</head>
+<!--Link al archivo css llamado home.css-->
+<link rel="stylesheet" type="text/css" href="/css/home.css">
+<link rel="stylesheet" type="text/css" href="/css/ciberseguridad.css">
+<body>
+    <header>
+        <!--Logo-->
+        <img id="logo" src="/imagenes/logo4.png" alt="Logo">
+        </div>
+        <!--Barra horizontal de menú-->
+        <nav class="navegacion">
+            <ul class="menu">
+                <li><a href="/index.html"">Home</a></li>
+                <li><a href="/linux.html">Linux</a></li>
+                <li><a href="#">Ciberseguridad</a>
+                    <ul class="submenu">
+                        <li><a href="/comandos.html">Comandos</a></li>
+                        <li><a href="/programas_utiles.html">Programas útiles</a></li>
+                        <li><a href="/cosas_sueltas.html">Cosas sueltas</a></li>
+                        <li><a href="/SQLi.html">SQL injection</a></li>
+                        <li><a href="/XXE.html">XXE</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Programación</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+<!--Ataque a código XML enviado a servidor-->
+<ul id="Comandos">
+    <lu>
+        <!--style="display: none; es para que aparezca por defecto oculto-->
+        <button onclick="leerMasXXE()" id="leerMasXXE" class="block">XXE</button>
+        <div class="XXE" id="linux" style="display: none;">
+        <p>Explicación de XXE</p>
+        <p>XXE local</p>
+        <p id="ejemplo">
+        <font color="olive"><</font><font color="red">!</font>DOCTYPE test <font color="#005F73">[</font> <br>
+
+        <!--Con &nbsp se tabula. Posiblemente haya una mejor forma.-->
+        &nbsp &nbsp &nbsp &nbsp <font color="orange"><</font><font color="red">!</font>ENTITY name "Pitah"<font color="orange">></font> <br>
+
+        <font color="#005F73">]</font><font color="olive">></font> <br><br>
+
+        &name;
+        </p>
+
+        <p>XXE remoto</p>
+        <p id="ejemplo">
+            <font color="olive"><</font><font color="red">!</font>DOCTYPE test <font color="#005F73">[</font> <br>
+    
+            <!--Con &nbsp se tabula. Posiblemente haya una mejor forma.-->
+            &nbsp &nbsp &nbsp &nbsp <font color="orange"><</font><font color="red">!</font>ENTITY xxe SYSTEM "file:///etc/passwd"<font color="orange">></font> <br>
+    
+            <font color="#005F73">]</font><font color="olive">></font> <br><br>
+
+            &xxe;
+        </p>
+        </div>
+
+        <script>
+            function leerMasXXE() {
+                var xxe = document.getElementById("linux");
+                if (xxe.style.display === "none") {
+                    xxe.style.display = "block";
+                } else {
+                    xxe.style.display = "none";
+                }
+            }
+        </script>
+    </lu>
+</ul>
+
+</body>
+</html>
